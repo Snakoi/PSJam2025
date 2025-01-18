@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwhonhnkitjf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y5f5s"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"switch_L",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uugfb"]
+
+[node name="Switch" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_y5f5s")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uugfb")
